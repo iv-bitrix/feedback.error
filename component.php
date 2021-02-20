@@ -5,10 +5,10 @@ if (check_bitrix_sessid() && $_SERVER['REQUEST_METHOD'] == "POST" && !empty($_RE
 {
 
 	$arMailFields = Array();
-	$arMailFields["ERROR_EMAIL_SUBJECT"] = trim ($_REQUEST["error_email_subject"]);
-	$arMailFields["ERROR_MESSAGE_TITLE"] = trim ($_REQUEST["error_message_title"]);
+	$arMailFields["ERROR_EMAIL_SUBJECT"] = GetMessage("SMSN_ERROR_EMAIL_SUBJECT");
+	$arMailFields["ERROR_MESSAGE_TITLE"] = GetMessage("SMSN_ERROR_EMAIL_MESSAGE_TITLE");
 	$arMailFields["ERROR_MESSAGE"] = trim ($_REQUEST["error_message"]);
-	$arMailFields["ERROR_DESCRIPTION_TITLE"] = trim ($_REQUEST["error_desc_title"]);
+	$arMailFields["ERROR_DESCRIPTION_TITLE"] = GetMessage("SMSN_ERROR_EMAIL_DESCRIPTION_TITLE");
 	$arMailFields["ERROR_DESCRIPTION"] = trim ($_REQUEST["error_desc"]);
 	$arMailFields["ERROR_URL"] = $_REQUEST["error_url"];
 	$arMailFields["ERROR_REFERER"] = $_REQUEST["error_referer"];

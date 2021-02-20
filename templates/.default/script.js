@@ -16,10 +16,7 @@ function SendError(event) {
 			title: BX.message('SMSN_FEEDBACK_ERROR_DIALOG_TITLE'),
 			head: BX.message('SMSN_FEEDBACK_ERROR_DIALOG_QUESTION'),
 			content: '<form method="POST" id="help_form">\
-				<input type="hidden" name="error_email_subject" value="'+ BX.message('SMSN_ERROR_EMAIL_SUBJECT') + '">\
-				<input type="hidden" name="error_message_title" value="'+ BX.message('SMSN_ERROR_EMAIL_MESSAGE_TITLE') + '">\
 				<input type="hidden" name="error_message" value="'+ getSelectedText() + '">\
-				<input type="hidden" name="error_desc_title" value="'+ BX.message('SMSN_ERROR_EMAIL_DESCRIPTION_TITLE') + '">\
 				<textarea name="error_desc" style="height: 78px; width: 374px;"></textarea>\
 				<input type="hidden" name="error_url" value="'+ window.location + '">\
 				<input type="hidden" name="error_referer" value="'+ document.referrer + '">\
