@@ -3,12 +3,12 @@ if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
 CUtil::InitJSCore(array('window', 'ajax'));
 
-if ($arParams['SET_MESSAGE'] == 'Y') {
-	echo '<div id="smsn_feedback_error">';
-	echo $arParams['FEEDBACK_ERROR_MESSAGE'];
-	echo '</div>';
-}
 ?>
+
+<!-- show the content message if it is enabled -->
+<div id="smsn_feedback_error">
+	<?= ($arParams['SET_MESSAGE'] != 'Y') ? : $arParams['FEEDBACK_ERROR_MESSAGE'] ?>
+</div>
 
 <!-- send localised messages to JS -->
 <script>
